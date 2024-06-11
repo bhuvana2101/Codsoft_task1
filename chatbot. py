@@ -1,0 +1,32 @@
+def chatbox_response(user_input):
+    user_input = user_input.lower()
+    
+    if 'hello' in user_input or 'hi' in user_input or 'hey' in user_input:
+        return 'Hi, how may I assist you?'
+
+    elif "tell me a joke" in user_input:
+        return "Sure, here's a joke for you: How do you write the word 'cow' in 13 letters? See double-ya!"
+
+    elif "what is the price of nifty50 today?" in user_input:
+        return "The current Nifty50 price is 19,597.30, with a change of +80.30 from the previous close."
+
+    elif "what can you do?" in user_input:
+        return "I can answer questions, generate text, provide assistance, and offer recommendations."
+
+    elif "what is the capital of france" in user_input:
+        return "The capital of France is Paris, known for its landmarks, cuisine, and culture."
+
+    elif "can you recommend a good book" in user_input:
+        return "Certainly! I recommend 'IKIGAI: The Japanese Secret to a Long and Happy Life'."
+
+    else:
+        return "I'm sorry, I couldn't understand your request. Please try again or ask something else."
+
+print("Hi, I'm Chatbox. Feel free to ask me anything or get assistance. You can say 'Thanks, have a great time ahead' to exit.")
+while True:
+    user_input = input("User: ")
+    if user_input.lower() == "thanks, have a great time ahead":
+        print("Chatbox: Thanks! Have a good time!")
+        break
+    response = chatbox_response(user_input)
+    print("Chatbox:", response)
